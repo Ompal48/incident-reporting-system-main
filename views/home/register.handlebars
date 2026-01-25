@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Register</title>
+  <meta charset="UTF-8">
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+</head>
+<body style="margin:0; padding:0; background-color:#0f0f0f; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display:flex; justify-content:center; align-items:center; height:100vh;">
+
+  <div style="background-color:#1e1e1e; padding:40px; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.5); width:100%; max-width:500px;">
+    
+    <h2 style="color:#ffffff; text-align:center; margin-bottom:25px;">Register an Account</h2>
+
+    <form action="/register" method="post">
+      <div style="display:flex; gap:10px; margin-bottom:20px;">
+        <div style="flex:1;">
+          <label style="color:#ccc; display:block; margin-bottom:6px;">First Name</label>
+          <input value="{{firstName}}" name="firstName" type="text" placeholder="First name"
+                 style="width:100%; padding:12px; border:none; border-radius:6px; background-color:#2b2b2b; color:white; outline:none;">
+        </div>
+        <div style="flex:1;">
+          <label style="color:#ccc; display:block; margin-bottom:6px;">Last Name</label>
+          <input value="{{lastName}}" name="lastName" type="text" placeholder="Last name"
+                 style="width:100%; padding:12px; border:none; border-radius:6px; background-color:#2b2b2b; color:white; outline:none;">
+        </div>
+      </div>
+
+      <div style="margin-bottom:20px;">
+        <label style="color:#ccc; display:block; margin-bottom:6px;">Email Address</label>
+        <input value="{{email}}" name="email" type="email" placeholder="Enter email"
+               style="width:100%; padding:12px; border:none; border-radius:6px; background-color:#2b2b2b; color:white; outline:none;">
+      </div>
+
+      <div style="display:flex; gap:10px; margin-bottom:20px;">
+        <div style="flex:1;">
+          <label style="color:#ccc; display:block; margin-bottom:6px;">Password</label>
+          <input name="password" type="password" placeholder="Password"
+                 style="width:100%; padding:12px; border:none; border-radius:6px; background-color:#2b2b2b; color:white; outline:none;">
+        </div>
+        <div style="flex:1;">
+          <label style="color:#ccc; display:block; margin-bottom:6px;">Confirm Password</label>
+          <input name="passwordConfirm" type="password" placeholder="Confirm password"
+                 style="width:100%; padding:12px; border:none; border-radius:6px; background-color:#2b2b2b; color:white; outline:none;">
+        </div>
+      </div>
+
+      <div style="margin-bottom:20px;">
+        <label style="color:#ccc; display:block; margin-bottom:6px;">Admin Secret Code</label>
+        <input name="adminCode" type="text" placeholder="Only if you're an admin"
+               style="width:100%; padding:12px; border:none; border-radius:6px; background-color:#2b2b2b; color:white; outline:none;">
+      </div>
+
+      <div class="g-recaptcha" data-sitekey="6LekbnUUAAAAAKxDpOFEHQbwyAXALGrbt2dU6q4p" style="margin-bottom:20px;"></div>
+
+      <button type="submit" 
+              style="width:100%; padding:12px; background-color:#007bff; color:white; border:none; border-radius:6px; font-weight:bold; cursor:pointer; transition:background 0.3s;">
+        Register
+      </button>
+    </form>
+
+    <div style="text-align:center; margin-top:20px;">
+      <a href="/login" style="color:#1e90ff; text-decoration:none; display:block; margin-bottom:8px;">Login Page</a>
+      <a href="/" style="color:#1e90ff; text-decoration:none;">Go to Homepage</a>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
