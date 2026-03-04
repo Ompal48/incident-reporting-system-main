@@ -1,4 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
-    mongoDbUrl: 'mongodb://localhost:27017/incident-reporting'
-  };
-  
+    mongoDbUrl: process.env.MONGODB_URI
+};

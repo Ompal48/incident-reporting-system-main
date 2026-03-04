@@ -133,8 +133,7 @@ app.post('/send', (req, res)=>{
 
 
 
-
-app.listen(4500, ()=>{
-    console.log('listening on port 4500')
+const PORT = process.env.PORT || 4500;
+app.listen(PORT, ()=>{
+    console.log('listening on port ' + PORT)
 });
-
