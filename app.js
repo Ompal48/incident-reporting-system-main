@@ -134,10 +134,7 @@ app.post('/send', (req, res)=>{
 
 
 const PORT = process.env.PORT || 4500;
-if (process.env.NODE_ENV !== 'production') {
-    app.listen(PORT, ()=>{
-        console.log('listening on port ' + PORT)
-    });
-}
-
+app.listen(PORT, '0.0.0.0', ()=>{
+    console.log('listening on port ' + PORT)
+});
 module.exports = app;
